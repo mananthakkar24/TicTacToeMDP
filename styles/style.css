@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  #intro-screen {
+    max-width: 420px;
+    text-align: center;  /* Centers h2 and buttons */
+    visibility: visible;
+  }
+
+  #intro-screen h2 {
+    padding: 0 15px;  /* Prevent text from touching the edges of the screen */
+  }
+  #intro-screen button {
+    font-size: 3.4em;
+    padding: 3% 6%;  /* With "%" padding is based on container's width */
+    margin: 0 4%;  /* Create distance between buttons */
+  }
+.sidebar {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: all .5s ease;
+  }
+.sidebar header {
+    font-size: 22px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    background: #063146;
+    user-select: none;
+  }
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    border-top: 1px solid rgba(255,255,255,.1);
+    transition: .4s;
+  }
+ul li:hover a{
+    padding-left: 50px;
+  }
+.sidebar ul a i{
+    margin-right: 16px;
+  }
+#check{
+    display: none;
+  }
+label #btn,label #cancel{
+    position: absolute;
+    background: #042331;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+label #btn{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s;
+  }
+label #cancel{
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: #0a5275;
+    padding: 4px 9px;
+    transition: all .5s ease;
+  }
+#check:checked ~ .sidebar{
+    left: 0;
+  }
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+  }
+#check:checked ~ label #cancel{
+    left: 195px;
+  }
+#check:checked ~ section{
+    margin-left: 250px;
+  }
+
+.open-button{
+    position: absolute;
+    cursor: pointer;
+	left: 50%;
+	margin-left: -155px;
+    top: 30%;
+    font-size: 40px;
+    display:block;
+    background-color: black;
+    border: none;
+    border-radius: 40px;
+    padding: 29px;
+    color: blanchedalmond;
+    width: 20%;
+}
+.open-button:hover{
+    background-color:green;
+}
+.close-button{
+    position: absolute;
+    cursor: pointer;
+	left: 50%;
+	margin-left: 159px;
+    top: 30%;
+    font-size: 70px;
+    display:none;
+    background: none;
+    border: none;
+}
+.close-button:hover{
+    color: red;
+}
+table {
+	border-collapse: collapse;
+	position: absolute;
+	left: 50%;
+	margin-left: -155px;
+    top: 30%;
+    display:none;
+}
+
+td {
+	border:  5px solid rgb(255, 255, 255);
+	height:  100px;
+	width:  100px;
+	text-align:  center;
+	vertical-align:  middle;
+	font-family:  "Arial", cursive, sans-serif;
+  font-size:  70px;
+  color:white;
+  cursor: pointer;
+  background-color: black;
+}
+
+td:hover {
+    opacity: 0.8;
+}
+
+body{
+    background: url(/gamebg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  }
+
+table tr:first-child td{
+    border-top: 0;
+}
+table tr:last-child td{
+    border-bottom: 0;
+}
+table tr td:first-child{
+    border-left: 0;
+}
+table tr td:last-child{
+    border-right: 0;
+}
+
+.endgame {
+    display: none;
+    width: 200px;
+    top: 40%;
+    height: 60px;
+    background-color: rgba(35, 169, 179, 0.8);
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 2em;
+  }
+  
+  #replay{
+    cursor: pointer;
+    font-size: 12px;
+    padding: 10px 24px;
+    border-radius: 12px;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+  }
+
+#replay:hover {
+    background-color: #555555;
+    color: white;
+}
+
+#enemy-screen button {
+  display: block;
+  margin: 0.6em 1em;
+  font-size: 1.9em;
+  padding: 0.2em 0.4em;
+}
