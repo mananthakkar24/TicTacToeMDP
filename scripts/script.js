@@ -131,9 +131,9 @@ function checkTie() {
             cells[i].removeEventListener('click', turnClick, false);
         }
         declareWinner("Tie Game!")
-        var c = 0;
-        var count=c+1;
-        alert(count);
+        // var c = 0;
+        // var count=c+1;
+        // alert(count);
         return true;
     }
     return false;
