@@ -4,21 +4,9 @@
     list-style: none;
     text-decoration: none;
   }
-
-  #intro-screen {
-    max-width: 420px;
-    text-align: center;  /* Centers h2 and buttons */
-    visibility: visible;
-  }
-
-  #intro-screen h2 {
-    padding: 0 15px;  /* Prevent text from touching the edges of the screen */
-  }
-  #intro-screen button {
-    font-size: 3.4em;
-    padding: 3% 6%;  /* With "%" padding is based on container's width */
-    margin: 0 4%;  /* Create distance between buttons */
-  }
+#turn-tell{
+  visibility: hidden;
+}
 .sidebar {
     position: fixed;
     left: -250px;

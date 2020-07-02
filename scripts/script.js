@@ -1,15 +1,16 @@
 var board;
-//const human="O";
-//const ai="X";
-
+//const human="";
+//const ai="";
 $(document).ready(function() {
     $("#choose-x").on("click", function() {
       human = "X";
       ai = "O";
+      document.getElementById("turn-tell").innerHTML = "Player X turn first";
     });
     $("#choose-o").on("click", function() {
       human = "O";
       ai = "X";
+      document.getElementById("turn-tell").innerHTML = "Player O turn first";
       
     });
 });
@@ -34,10 +35,9 @@ var win=[
     [0,4,8],
     [2,4,6]
 ]
-function playgame(){
-    document.getElementById
-}
+
 function opengame(){
+    document.getElementById("turn-tell").style.visibility="visible";
     document.getElementById("gametable").style.display="block";
     document.querySelector(".open-button").style.display="none";
     document.querySelector(".close-button").style.display="block";
@@ -54,20 +54,27 @@ function closegame(){
 const cells=document.querySelectorAll('.cell');
 startGame();
 
+function playsound() {
+    var a = new Audio('sound.mp3');
+    a.play();
+}
 function startGame(){
     document.querySelector('.endgame').style.display='none';
     board = Array.from(Array(9).keys());
     for(var i=0;i<cells.length;i++){
         cells[i].innerText='';
         cells[i].style.removeProperty('background-color');
+        cells[i].addEventListener('click',playsound,false);
         cells[i].addEventListener('click',turnClick,false);
+        
     }
 }
 
 function turnClick(square){
     if (typeof board[square.target.id] == 'number') {
-        turn(square.target.id, human)
+        turn(square.target.id, human);
         if (!checkTie()) turn(bestSpot(), ai);
+        
     }
 }
 
@@ -179,3 +186,4 @@ function minimax(newBoard, player) {
 
     return moves[bestMove];
 }
+
