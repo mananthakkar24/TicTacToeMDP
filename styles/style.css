@@ -4,6 +4,13 @@
     list-style: none;
     text-decoration: none;
   }
+#choose-x, #choose-o, #choose-cpu, #choose-human{
+  font-size: 3em;
+  border: 2px solid blue;
+  border-radius: 10%;
+  padding: 10px 44px;
+  
+}
 #turn-tell{
   visibility: hidden;
 }

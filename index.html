@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -30,19 +29,20 @@
 </div>
     </section>
 <div class="container">
-<div class="row">
-        <div class="col-md-3"><h2>Choose your symbol:</h2></div>
-        <div class="col-md-3"><button type="button" id="choose-x" class="btn btn-primary choose">X</button></div>
-        <div class="col-md-3"><button type="button" id="choose-o" class="btn btn-primary choose">O</button></div>
+    <div class="row">
+        <div class="col-md-6">
+        <h1>Choose your Symbol</h1>
+        <button type="button" id="choose-x" class="btn btn-primary choose"><strong>X</strong></button>
+        <button type="button" id="choose-o" class="btn btn-primary choose"><strong>O</strong></button>
     </div>
+        <div class="col-md-6">
+        <h1>Play against:</h1>
+        <button type="button" id="choose-human" class="btn btn-primary choose">Human</button>
+        <button type="button" id="choose-cpu" class="btn btn-primary choose">CPU</button>
+    
 </div>
-
-      <div id="enemy-screen" class="center hidden">
-        <h2>Play against:</h2>
-        <button type="button" id="choose-human" class="choose">Human</button>
-        <button type="button" id="choose-cpu" class="choose">CPU</button>
-      </div>
-
+</div>
+</div>
 
  <section class="main_game">
      
