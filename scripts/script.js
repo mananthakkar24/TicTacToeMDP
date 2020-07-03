@@ -102,18 +102,10 @@ function turnClickComp(square){
 
 function turnClickHuman(square){
     if (typeof board[square.target.id] == 'number') {
-        // sqr.on('click', (e) => {
-            movesMade++;
-            //this is keeping track of whose turn it is
-            //if it's odd then it's player one's turn else player two's
             if (currentTurn % 2 === 1) {
-                // event.target.innerHTML = player1;
-                // event.target.style.color = "red";
                 turn(square.target.id, human1);
                 currentTurn++;
             } else {
-                // event.target.innerHTML = player2;
-                // event.target.style.color = "green";
                 turn(square.target.id, human2);
                 currentTurn--;
             }
@@ -122,10 +114,6 @@ function turnClickHuman(square){
             //     theWinner = currentTurn == 1 ? human2 : human1;
             //     declareWinner(theWinner);
             // }
-        // });
-        // turn(square.target.id, human1);
-        // turn(square.target.id, human2);
-        //if (!checkTie()) turn(bestSpot(), ai);
         
     }
 }

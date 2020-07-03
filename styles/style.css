@@ -4,91 +4,34 @@
     list-style: none;
     text-decoration: none;
   }
-#choose-x, #choose-o, #choose-cpu, #choose-human{
-  font-size: 3em;
-  border: 2px solid blue;
+#choose-x, #choose-o{
+  font-size: 1.5em;
+  border: 2px solid #042331;
   border-radius: 10%;
-  padding: 10px 44px;
-  
+  padding: 10px 50px;
+  background-color: #042331;
+  color: blanchedalmond;
+  /* margin-top: 10px; */
 }
+
+#choose-cpu, #choose-human{
+  font-size: 1.5em;
+  border: 2px solid #042331;
+  border-radius: 10%;
+  padding: 10px 50px;
+  background-color: #042331;
+  color: blanchedalmond;
+  /* margin-top: 10px; */
+}
+
+.container h1{
+  margin-top: 10px;
+  color: #042331;
+}
+
 #turn-tell{
   visibility: hidden;
 }
-.sidebar {
-    position: fixed;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background: #042331;
-    transition: all .5s ease;
-  }
-.sidebar header {
-    font-size: 22px;
-    color: white;
-    line-height: 70px;
-    text-align: center;
-    background: #063146;
-    user-select: none;
-  }
-.sidebar ul a{
-    display: block;
-    height: 100%;
-    width: 100%;
-    line-height: 65px;
-    font-size: 20px;
-    color: white;
-    padding-left: 40px;
-    box-sizing: border-box;
-    border-bottom: 1px solid black;
-    border-top: 1px solid rgba(255,255,255,.1);
-    transition: .4s;
-  }
-ul li:hover a{
-    padding-left: 50px;
-  }
-.sidebar ul a i{
-    margin-right: 16px;
-  }
-#check{
-    display: none;
-  }
-label #btn,label #cancel{
-    position: absolute;
-    background: #042331;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-label #btn{
-    left: 40px;
-    top: 25px;
-    font-size: 35px;
-    color: white;
-    padding: 6px 12px;
-    transition: all .5s;
-  }
-label #cancel{
-    z-index: 1111;
-    left: -195px;
-    top: 17px;
-    font-size: 30px;
-    color: #0a5275;
-    padding: 4px 9px;
-    transition: all .5s ease;
-  }
-#check:checked ~ .sidebar{
-    left: 0;
-  }
-#check:checked ~ label #btn{
-    left: 250px;
-    opacity: 0;
-    pointer-events: none;
-  }
-#check:checked ~ label #cancel{
-    left: 195px;
-  }
-#check:checked ~ section{
-    margin-left: 250px;
-  }
 
 .open-button{
     position: absolute;
@@ -98,7 +41,7 @@ label #cancel{
     top: 30%;
     font-size: 40px;
     display:block;
-    background-color: black;
+    background-color: #042331;
     border: none;
     border-radius: 40px;
     padding: 29px;
@@ -132,16 +75,16 @@ table {
 }
 
 td {
-	border:  5px solid rgb(255, 255, 255);
+	border:  10px solid #042331;
 	height:  100px;
 	width:  100px;
 	text-align:  center;
 	vertical-align:  middle;
 	font-family:  "Arial", cursive, sans-serif;
   font-size:  70px;
-  color:white;
+  color: black;
   cursor: pointer;
-  background-color: black;
+  /* background-color: slategrey; */
 }
 
 td:hover {
