@@ -173,9 +173,6 @@ function checkTie() {
             cells[i].removeEventListener('click', turnClickHuman, false);
         }
         declareWinner("Tie Game!")
-        // var c = 0;
-        // var count=c+1;
-        // alert(count);
         return true;
     }
     return false;

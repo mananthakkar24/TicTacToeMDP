@@ -6,27 +6,27 @@
   }
 #choose-x, #choose-o{
   font-size: 1.5em;
-  border: 2px solid #042331;
+  border: 2px solid blanchedalmond;
   border-radius: 10%;
   padding: 10px 50px;
-  background-color: #042331;
-  color: blanchedalmond;
+  background-color: blanchedalmond;
+  color: black;
   /* margin-top: 10px; */
 }
 
 #choose-cpu, #choose-human{
   font-size: 1.5em;
-  border: 2px solid #042331;
+  border: 2px solid blanchedalmond;
   border-radius: 10%;
   padding: 10px 50px;
-  background-color: #042331;
-  color: blanchedalmond;
+  background-color: blanchedalmond;
+  color: black;
   /* margin-top: 10px; */
 }
 
 .container h1{
   margin-top: 10px;
-  color: #042331;
+  color: blanchedalmond;
 }
 
 #turn-tell{
@@ -41,11 +41,11 @@
     top: 30%;
     font-size: 40px;
     display:block;
-    background-color: #042331;
+    background-color: blanchedalmond;
     border: none;
     border-radius: 40px;
     padding: 29px;
-    color: blanchedalmond;
+    color: black;
     width: 20%;
 }
 .open-button:hover{
@@ -65,6 +65,9 @@
 .close-button:hover{
     color: red;
 }
+.close-button{
+  color: blanchedalmond;
+}
 table {
 	border-collapse: collapse;
 	position: absolute;
@@ -75,14 +78,14 @@ table {
 }
 
 td {
-	border:  10px solid #042331;
+	border:  10px solid blanchedalmond;
 	height:  100px;
 	width:  100px;
 	text-align:  center;
 	vertical-align:  middle;
 	font-family:  "Arial", cursive, sans-serif;
   font-size:  70px;
-  color: black;
+  color: blanchedalmond;
   cursor: pointer;
   /* background-color: slategrey; */
 }
@@ -92,7 +95,7 @@ td:hover {
 }
 
 body{
-    background: url(/gamebg.jpg) no-repeat;
+    background: url(/slatebg.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
