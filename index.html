@@ -48,7 +48,7 @@
  <section class="main_game">
      
         <button class="open-button" onclick="opengame()">Lets Play</button>
-        <button class="close-button" onclick="closegame(); startGame();"><i class="fas fa-window-close"></i></button>
+        <button class="close-button" onclick="closegame(); location.reload(true)"><i class="fas fa-window-close"></i></button>
     <h3 id="turn-tell"></h3>
         <table id="gametable">
         <tr>
@@ -75,7 +75,7 @@
 
     <div class="endgame">
         <div class="text"></div>
-        <button id="replay" onclick="startGame()">Replay</button>
+        <button id="replay" onclick=location.reload(true)>Replay</button>
     </div>
     
 <audio id="sounds" loop= "false" volume = "100">
