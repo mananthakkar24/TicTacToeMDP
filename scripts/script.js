@@ -9,11 +9,15 @@ $(document).ready(function() {
     $("#choose-x").on("click", function() {
       human1 = "X";
       human2 = "O";
+      document.getElementById("xscore").innerHTML="You chose X, X Score:";
+      document.getElementById("oscore").innerHTML="O Score:";
     //   document.getElementById("turn-tell").innerHTML = "Player X turn first";
     });
     $("#choose-o").on("click", function() {
       human1 = "O";
       human2 = "X";
+      document.getElementById("oscore").innerHTML="You chose O, O Score:";
+      document.getElementById("xscore").innerHTML="X Score:";
     //   document.getElementById("turn-tell").innerHTML = "Player O turn first";
       
     });
