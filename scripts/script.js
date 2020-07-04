@@ -165,7 +165,13 @@ function gameOver(gameWon) {
         cells[i].removeEventListener('click', turnClickComp, false);
         cells[i].removeEventListener('click', turnClickHuman, false);
     }
-    declareWinner(gameWon.player==human1?"Player 1 Wins!":"Player 2 Wins!");
+    if (cpuEnabled===true){
+        declareWinner(gameWon.player==human1?"Player 1 Wins!":"CPU Wins!");
+    }
+    else{
+        declareWinner(gameWon.player==human1?"Player 1 Wins!":"Player 2 Wins!"); 
+    }
+    
     if (gameWon.player===human1){
         points1++;
         document.getElementById("computer_score").innerHTML = points1;
