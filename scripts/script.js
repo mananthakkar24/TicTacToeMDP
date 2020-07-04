@@ -3,6 +3,15 @@ var points1 = 0;
 var points2 = 0;
 var points3 = 0;
 
+var sound  = getElementById("backdrop");
+        function mute(){
+          if(backdrop.muted == false){
+            backdrop.muted = true;
+          } else {
+            backdrop.muted = false;
+          }
+}
+
 $(document).ready(function() {
     $("#choose-x").on("click", function() {
       human1 = "X";

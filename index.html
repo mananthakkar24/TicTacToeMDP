@@ -16,7 +16,8 @@
 
 <div class="container">
 <div class="row">
-    <div class="col-sm-12 heading"><h1 style="font-size:5em;">Unbeatable Tic Tac Toe</h1></div>
+    <div class="col-sm-11 heading"><h1 style="font-size:5em;">Unbeatable Tic Tac Toe</h1></div>
+    <div class="col-sm-1"><button type="toggle" onclick="mute()">Mute/Unmute</button></div>
     <div class="col-sm-4 buttt">
     <button type="button" id="playgame" onclick="showw()" class="btn btn-primary choose">Lets Play</button>
 </div>
@@ -83,6 +84,10 @@
 <button id="replay" onclick="chooser()">Replay</button>
 </div>
 
+<audio id="backdrop" autoplay="true" loop="loop">
+<source src="backdrop.mp3">
+If you are reading this, it is because your browser does not support the audio element.
+</audio>
 <script src="scripts/jquery-3.4.1.js"></script>
 <script src="scripts/script.js"></script>
 
