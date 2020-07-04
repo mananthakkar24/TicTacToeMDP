@@ -17,7 +17,7 @@
 <div class="container">
 <div class="row">
     <div class="col-sm-11 heading"><h1 style="font-size:5em;">Unbeatable Tic Tac Toe</h1></div>
-    <div class="col-sm-1"><button type="toggle" onclick="mute()">Mute/Unmute</button></div>
+    <div class="col-sm-1"><button type="toggle" id="sound" onclick="mute()"><i class="fas fa-music"></i></button></div>
     <div class="col-sm-4 buttt">
     <button type="button" id="playgame" onclick="showw()" class="btn btn-primary choose">Lets Play</button>
 </div>
@@ -71,11 +71,11 @@
 <div class="container" id="scoring_data">  
 <div class="row">
 <div class="col-md-2" id="opted"></div>
-<div class="col-md-2" id="xscore">Player 1 Score</div>
+<div class="col-md-2" id="xscore">Player 1's Score</div>
 <div class="col-md-1" id="computer_score">0</div>
-<div class="col-md-2">Draws
-<div class="col-md-1" id="tie_score">0</div></div>
-<div class="col-md-2" id="oscore">Player 2 Score</div>
+<div class="col-md-2">Ties:</div>
+<div class="col-md-1" id="tie_score">0</div>
+<div class="col-md-2" id="oscore">Player 2's Score</div>
 <div class="col-md-1" id="player_score">0</div>
 </div>
 </div>

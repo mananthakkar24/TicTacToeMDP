@@ -1,9 +1,10 @@
+alert("This is the MDP Project  G31 Tanish Verma Ananya Joshi Manan Thakkar Shreyansh Dubey");
 var board;
 var points1 = 0;
 var points2 = 0;
 var points3 = 0;
 
-var sound  = getElementById("backdrop");
+
         function mute(){
           if(backdrop.muted == false){
             backdrop.muted = true;
@@ -16,12 +17,12 @@ $(document).ready(function() {
     $("#choose-x").on("click", function() {
       human1 = "X";
       human2 = "O";
-      document.getElementById("opted").innerHTML="You chose X";
+      document.getElementById("opted").innerHTML="You've Chosen X";
     });
     $("#choose-o").on("click", function() {
       human1 = "O";
       human2 = "X";
-      document.getElementById("opted").innerHTML="You chose O";
+      document.getElementById("opted").innerHTML="You've Chosen O";
     });
 });
 
