@@ -24,6 +24,11 @@
   /* margin-top: 10px; */
 }
 
+#choose-cpu:hover, #choose-human:hover, #choose-x:hover, #choose-o:hover{
+  background-color: rgb(255, 208, 137);
+  transition: 0.8s;
+}
+
 .container h1{
   margin-top: 10px;
   color: blanchedalmond;
@@ -50,6 +55,7 @@
 }
 .open-button:hover{
     background-color:green;
+    transition: 0.8s;
 }
 .close-button{
     position: absolute;
@@ -95,7 +101,7 @@ td:hover {
 }
 
 body{
-    background: url(/slatebg.jpg) no-repeat;
+    /*background: url(/slatebg.jpg) no-repeat;*/
     background-position: center;
     background-size: cover;
     height: 100vh;

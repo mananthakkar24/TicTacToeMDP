@@ -1,4 +1,8 @@
 var board;
+var points1 = 0;
+var points2 = 0;
+var points3 = 0;
+
 //const human="";
 //const ai="";
 $(document).ready(function() {
@@ -26,7 +30,14 @@ $(document).ready(function() {
     startGameComp();
     //console.log(cpuEnabled);
   });
-
+  function chooser(){
+    if (cpuEnabled===true){
+        startGameComp();
+    }
+    else{
+        startGameHuman();
+    }
+}
 var win=[
     [0,1,2],
     [3,4,5],
@@ -88,7 +99,6 @@ function startGameHuman(){
         cells[i].style.removeProperty('background-color');
         cells[i].addEventListener('click',playsound,false);
         cells[i].addEventListener('click',turnClickHuman,false);
-        
     }
 }
 
@@ -109,8 +119,7 @@ function turnClickHuman(square){
                 turn(square.target.id, human2);
                 currentTurn--;
             }
-        
-            // if (!checkTie()) {
+            if (!checkTie()) turn(turnClickHuman());
             //     theWinner = currentTurn == 1 ? human2 : human1;
             //     declareWinner(theWinner);
             // }
@@ -138,6 +147,7 @@ function checkWin(board, player) {
         }
     }
     return gameWon;
+    
 }
 
 function gameOver(gameWon) {
@@ -150,6 +160,21 @@ function gameOver(gameWon) {
         cells[i].removeEventListener('click', turnClickHuman, false);
     }
     declareWinner(gameWon.player==human1?"Player 1 Wins!":"Player 2 Wins!");
+    if (gameWon.player===human1){
+        points1++;
+        document.getElementById("computer_score").innerHTML = points1;
+        console.log(points1);
+    }
+    else if(gameWon.player===human2){
+        points2++;
+        document.getElementById("player_score").innerHTML = points2;
+        console.log(points2);
+    }
+    //else{
+       // points3++;
+     //   document.getElementById("tie_score").innerHTML = points3;
+   // }
+    
 }
 
 function declareWinner(who) {
@@ -173,6 +198,8 @@ function checkTie() {
             cells[i].removeEventListener('click', turnClickHuman, false);
         }
         declareWinner("Tie Game!")
+        points3++;
+        document.getElementById("tie_score").innerHTML = points3;
         return true;
     }
     return false;
