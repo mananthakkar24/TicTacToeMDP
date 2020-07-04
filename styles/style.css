@@ -13,7 +13,23 @@
   color: black;
   /* margin-top: 10px; */
 }
+#scoring_data{
+  margin-top: 38%;
+  width: 100%;
+  color: black;
+  font-weight: bold;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: blanchedalmond;
+  visibility: hidden;
+}
 
+#play_against {
+  visibility: hidden;
+}
+#option_choose {
+  visibility: visible;
+}
 #choose-cpu, #choose-human{
   font-size: 1.5em;
   border: 2px solid blanchedalmond;
@@ -39,19 +55,20 @@
 }
 
 .open-button{
-    position: absolute;
-    cursor: pointer;
-	left: 50%;
-	margin-left: -155px;
-    top: 30%;
-    font-size: 40px;
-    display:block;
-    background-color: blanchedalmond;
-    border: none;
-    border-radius: 40px;
-    padding: 29px;
-    color: black;
-    width: 20%;
+  position: absolute;
+  cursor: pointer;
+  left: 50%;
+  margin-left: -155px;
+  top: 30%;
+  font-size: 40px;
+  display:block;
+  background-color: blanchedalmond;
+  border: none;
+  border-radius: 40px;
+  padding: 29px;
+  color: black;
+  width: 20%;
+  visibility: hidden;
 }
 .open-button:hover{
     background-color:green;
@@ -101,7 +118,7 @@ td:hover {
 }
 
 body{
-    /*background: url(/slatebg.jpg) no-repeat;*/
+    background: url(/slatebg.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;

@@ -3,23 +3,16 @@ var points1 = 0;
 var points2 = 0;
 var points3 = 0;
 
-//const human="";
-//const ai="";
 $(document).ready(function() {
     $("#choose-x").on("click", function() {
       human1 = "X";
       human2 = "O";
       document.getElementById("opted").innerHTML="You chose X";
-     // document.getElementById("oscore").innerHTML="Player 2 Score:";
-    //   document.getElementById("turn-tell").innerHTML = "Player X turn first";
     });
     $("#choose-o").on("click", function() {
       human1 = "O";
       human2 = "X";
       document.getElementById("opted").innerHTML="You chose O";
-      //document.getElementById("xscore").innerHTML="Player 2 Score:";
-    //   document.getElementById("turn-tell").innerHTML = "Player O turn first";
-      
     });
 });
 
@@ -27,14 +20,14 @@ $(document).ready(function() {
   $("#choose-human").on("click", function() {
     cpuEnabled = false;
     startGameHuman();
-    //console.log(cpuEnabled);
+
   });
   $("#choose-cpu").on("click", function() {
     cpuEnabled = true;
     document.getElementById("xscore").innerHTML="Your Score:";
     document.getElementById("oscore").innerHTML="CPU Score:";
     startGameComp();
-    //console.log(cpuEnabled);
+
   });
   function chooser(){
     if (cpuEnabled===true){
@@ -62,11 +55,22 @@ var winnerContainer = $('.winner');
 var reset = $('.reset');
 var sqr = $('.square');
 
+function showit(){
+document.getElementById("play_against").style.visibility="visible";
+}
+function showit2(){
+    document.getElementById("open-button").style.visibility="visible";
+    }
+
+
 function opengame(){
-    document.getElementById("turn-tell").style.visibility="visible";
+    //document.getElementById("turn-tell").style.visibility="visible";
     document.getElementById("gametable").style.display="block";
     document.querySelector(".open-button").style.display="none";
     document.querySelector(".close-button").style.display="block";
+    document.getElementById("scoring_data").style.visibility="visible";
+    document.getElementById("play_against").style.visibility="hidden";
+    document.getElementById("option_choose").style.visibility="hidden";
     // document.getElementById("intro-screen").style.visibility="hidden";
 }
 
@@ -265,7 +269,5 @@ function minimax(newBoard, player) {
             }
         }
     }
-
     return moves[bestMove];
 }
-

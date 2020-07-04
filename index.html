@@ -1,85 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    
-    <title>Tic Tac Toe</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/bootstrap.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<title>Tic Tac Toe</title>
 </head>
 <body>
-    </section>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-        <h1 style="margin-top: 25px;">Choose your symbol</h1>
-        <button type="button" id="choose-x" class="btn btn-primary choose"><strong>X</strong></button>
-        <button type="button" id="choose-o" class="btn btn-primary choose"><strong>O</strong></button>
-    </div>
-        <div class="col-md-6">
-        <h1 style="margin-top: 25px;">Play against</h1>
-        <button type="button" id="choose-human" class="btn btn-primary choose">Human</button>
-        <button type="button" id="choose-cpu" class="btn btn-primary choose">CPU</button>
-    
-</div>
-</div>
-</div>
-
-
-
-
-
- <section class="main_game">
-     
-        <button class="open-button" onclick="opengame()">Lets Play</button>
-        <button class="close-button" onclick="closegame(); location.reload(true)"><i class="fas fa-window-close"></i></button>
-    <h3 id="turn-tell"></h3>
-        <table id="gametable">
-        <tr>
-            <td class="cell" id="0"></td>
-            <td class="cell" id="1"></td>
-            <td class="cell" id="2"></td>
-        </tr>
-        <tr>
-            <td class="cell" id="3"></td>
-            <td class="cell" id="4"></td>
-            <td class="cell" id="5"></td>
-        </tr>
-        <tr>
-            <td class="cell" id="6"></td>
-            <td class="cell" id="7"></td>
-            <td class="cell" id="8"></td>
-        </tr>
-    </table>
 </section>
-<div class="container">  
+<div class="container">
 <div class="row">
-        <div class="col-md-2" id="opted"></div>
-        <div class="col-md-2" id="xscore">Player 1 Score</div>
-        <div class="col-md-1" id="computer_score">0</div>
-        <div class="col-md-2">Draws</div>
-        <div class="col-md-1" id="tie_score">0</div>
-        <div class="col-md-2" id="oscore">Player 2 Score</div>
-        <div class="col-md-1" id="player_score">0</div>
-    </div>
+<div class="col-md-6" id="option_choose">
+<h1 style="margin-top: 25px;">Choose your symbol</h1>
+<button type="button" id="choose-x" onclick="showit()" class="btn btn-primary choose" ><strong>X</strong></button>
+<button type="button" id="choose-o" onclick="showit()" class="btn btn-primary choose" ><strong>O</strong></button>
+</div>
+<div class="col-md-6" id=play_against>
+<h1 style="margin-top: 25px;">Play against</h1>
+<button type="button" id="choose-human" onclick="showit2()" class="btn btn-primary choose">Human</button>
+<button type="button" id="choose-cpu" onclick="showit2()" class="btn btn-primary choose">CPU</button>
+
+</div>
+</div>
 </div>
 
-    <div class="endgame">
-        <div class="text"></div>
-        <button id="replay" onclick="chooser()">Replay</button>
-    </div>
-    
-<audio id="sounds" loop= "false" volume = "100">
-<source src="sound.mp3" id="A" type="audio/mp3">
-</audio> 
+<section class="main_game">
+
+<button class="open-button" id="open-button" onclick="opengame()">Lets Play</button>
+<button class="close-button" onclick="closegame(); location.reload(true)"><i class="fas fa-window-close"></i></button>
+<h3 id="turn-tell"></h3>
+<table id="gametable">
+<tr>
+<td class="cell" id="0"></td>
+<td class="cell" id="1"></td>
+<td class="cell" id="2"></td>
+</tr>
+<tr>
+<td class="cell" id="3"></td>
+<td class="cell" id="4"></td>
+<td class="cell" id="5"></td>
+</tr>
+<tr>
+<td class="cell" id="6"></td>
+<td class="cell" id="7"></td>
+<td class="cell" id="8"></td>
+</tr>
+</table>
+</section>
+<div class="container" id="scoring_data">  
+<div class="row">
+<div class="col-md-2" id="opted"></div>
+<div class="col-md-2" id="xscore">Player 1 Score</div>
+<div class="col-md-1" id="computer_score">0</div>
+<div class="col-md-2">Draws
+<div class="col-md-1" id="tie_score">0</div></div>
+<div class="col-md-2" id="oscore">Player 2 Score</div>
+<div class="col-md-1" id="player_score">0</div>
+</div>
+</div>
+<div class="endgame">
+<div class="text"></div>
+<button id="replay" onclick="chooser()">Replay</button>
+</div>
 
 <script src="scripts/jquery-3.4.1.js"></script>
 <script src="scripts/script.js"></script>
-   
+
 </body>
 </html>
