@@ -9,15 +9,15 @@ $(document).ready(function() {
     $("#choose-x").on("click", function() {
       human1 = "X";
       human2 = "O";
-      document.getElementById("xscore").innerHTML="You chose X, Player 1 Score:";
-      document.getElementById("oscore").innerHTML="Player 2 Score:";
+      document.getElementById("opted").innerHTML="You chose X";
+     // document.getElementById("oscore").innerHTML="Player 2 Score:";
     //   document.getElementById("turn-tell").innerHTML = "Player X turn first";
     });
     $("#choose-o").on("click", function() {
       human1 = "O";
       human2 = "X";
-      document.getElementById("oscore").innerHTML="You chose O, Player 1 Score:";
-      document.getElementById("xscore").innerHTML="Player 2 Score:";
+      document.getElementById("opted").innerHTML="You chose O";
+      //document.getElementById("xscore").innerHTML="Player 2 Score:";
     //   document.getElementById("turn-tell").innerHTML = "Player O turn first";
       
     });
