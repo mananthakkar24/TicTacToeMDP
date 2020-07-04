@@ -55,12 +55,16 @@ var winnerContainer = $('.winner');
 var reset = $('.reset');
 var sqr = $('.square');
 
+function showw(){
+document.getElementById("option_choose").style.visibility="visible";
+}
 function showit(){
 document.getElementById("play_against").style.visibility="visible";
 }
+
 function showit2(){
-    document.getElementById("open-button").style.visibility="visible";
-    }
+document.getElementById("open-button").style.visibility="visible";
+}
 
 
 function opengame(){
@@ -71,6 +75,7 @@ function opengame(){
     document.getElementById("scoring_data").style.visibility="visible";
     document.getElementById("play_against").style.visibility="hidden";
     document.getElementById("option_choose").style.visibility="hidden";
+    document.getElementById("playgame").style.visibility="hidden";
     // document.getElementById("intro-screen").style.visibility="hidden";
 }
 

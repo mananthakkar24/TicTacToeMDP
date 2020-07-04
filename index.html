@@ -13,28 +13,38 @@
 <title>Tic Tac Toe</title>
 </head>
 <body>
-</section>
+
+<div class="container">
+<div class="row">
+    <div class="col-sm-12 heading"><h1 style="font-size:5em;">Unbeatable Tic Tac Toe</h1></div>
+    <div class="col-sm-4 buttt">
+    <button type="button" id="playgame" onclick="showw()" class="btn btn-primary choose">Lets Play</button>
+</div>
+</div>
+</div>
+
 <div class="container">
 <div class="row">
 <div class="col-md-6" id="option_choose">
-<h1 style="margin-top: 25px;">Choose your symbol</h1>
+<h1>Choose your symbol</h1>
 <button type="button" id="choose-x" onclick="showit()" class="btn btn-primary choose" ><strong>X</strong></button>
 <button type="button" id="choose-o" onclick="showit()" class="btn btn-primary choose" ><strong>O</strong></button>
 </div>
+
 <div class="col-md-6" id=play_against>
-<h1 style="margin-top: 25px;">Play against</h1>
+<h1>Play against</h1>
 <button type="button" id="choose-human" onclick="showit2()" class="btn btn-primary choose">Human</button>
 <button type="button" id="choose-cpu" onclick="showit2()" class="btn btn-primary choose">CPU</button>
-
 </div>
 </div>
 </div>
 
 <section class="main_game">
-
-<button class="open-button" id="open-button" onclick="opengame()">Lets Play</button>
+<div class="container">
+<button class="open-button" id="open-button" onclick="opengame()">Start Game</button>
 <button class="close-button" onclick="closegame(); location.reload(true)"><i class="fas fa-window-close"></i></button>
 <h3 id="turn-tell"></h3>
+</div>
 <table id="gametable">
 <tr>
 <td class="cell" id="0"></td>
@@ -53,6 +63,7 @@
 </tr>
 </table>
 </section>
+
 <div class="container" id="scoring_data">  
 <div class="row">
 <div class="col-md-2" id="opted"></div>

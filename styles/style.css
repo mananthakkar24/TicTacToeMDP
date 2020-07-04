@@ -11,10 +11,30 @@
   padding: 10px 50px;
   background-color: blanchedalmond;
   color: black;
-  /* margin-top: 10px; */
 }
+.heading{
+  text-align: center;
+}
+
+#playgame{
+  font-size: 1.5em;
+  border: 2px solid blanchedalmond;
+  border-radius: 10%;
+  padding: 10px 50px;
+  background-color: blanchedalmond;
+  color: black;
+  visibility: visible;
+}
+
+.buttt{
+  margin-left: auto;
+  margin-right: 27%;
+  margin-top: 10%;
+  visibility: visible;
+}
+
 #scoring_data{
-  margin-top: 38%;
+  margin-top:14%;
   width: 100%;
   color: black;
   font-weight: bold;
@@ -25,10 +45,11 @@
 }
 
 #play_against {
+  padding-left: 18%;
   visibility: hidden;
 }
 #option_choose {
-  visibility: visible;
+  visibility: hidden;
 }
 #choose-cpu, #choose-human{
   font-size: 1.5em;
@@ -37,10 +58,9 @@
   padding: 10px 50px;
   background-color: blanchedalmond;
   color: black;
-  /* margin-top: 10px; */
 }
 
-#choose-cpu:hover, #choose-human:hover, #choose-x:hover, #choose-o:hover{
+#choose-cpu:hover, #choose-human:hover, #choose-x:hover, #choose-o:hover, #playgame:hover{
   background-color: rgb(255, 208, 137);
   transition: 0.8s;
 }
@@ -55,21 +75,20 @@
 }
 
 .open-button{
-  position: absolute;
   cursor: pointer;
-  left: 50%;
-  margin-left: -155px;
-  top: 30%;
   font-size: 40px;
   display:block;
   background-color: blanchedalmond;
   border: none;
   border-radius: 40px;
-  padding: 29px;
+  padding: 1%;
   color: black;
-  width: 20%;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
   visibility: hidden;
 }
+
 .open-button:hover{
     background-color:green;
     transition: 0.8s;
@@ -91,13 +110,14 @@
 .close-button{
   color: blanchedalmond;
 }
+
 table {
 	border-collapse: collapse;
 	position: absolute;
 	left: 50%;
 	margin-left: -155px;
-    top: 30%;
-    display:none;
+  top: 30%;
+  display:none;
 }
 
 td {
@@ -110,7 +130,6 @@ td {
   font-size:  70px;
   color: blanchedalmond;
   cursor: pointer;
-  /* background-color: slategrey; */
 }
 
 td:hover {
