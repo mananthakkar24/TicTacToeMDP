@@ -9,15 +9,15 @@ $(document).ready(function() {
     $("#choose-x").on("click", function() {
       human1 = "X";
       human2 = "O";
-      document.getElementById("xscore").innerHTML="You chose X, X Score:";
-      document.getElementById("oscore").innerHTML="O Score:";
+      document.getElementById("xscore").innerHTML="You chose X, Player 1 Score:";
+      document.getElementById("oscore").innerHTML="Player 2 Score:";
     //   document.getElementById("turn-tell").innerHTML = "Player X turn first";
     });
     $("#choose-o").on("click", function() {
       human1 = "O";
       human2 = "X";
-      document.getElementById("oscore").innerHTML="You chose O, O Score:";
-      document.getElementById("xscore").innerHTML="X Score:";
+      document.getElementById("oscore").innerHTML="You chose O, Player 1 Score:";
+      document.getElementById("xscore").innerHTML="Player 2 Score:";
     //   document.getElementById("turn-tell").innerHTML = "Player O turn first";
       
     });
@@ -31,6 +31,8 @@ $(document).ready(function() {
   });
   $("#choose-cpu").on("click", function() {
     cpuEnabled = true;
+    document.getElementById("xscore").innerHTML="Your Score:";
+    document.getElementById("oscore").innerHTML="CPU Score:";
     startGameComp();
     //console.log(cpuEnabled);
   });
